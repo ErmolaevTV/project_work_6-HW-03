@@ -1,0 +1,7 @@
+---
+# tasks file for docker
+- include_tasks: RedHat-Docker.yml
+  when: ansible_os_family == 'RedHat'
+
+- include_tasks: Ubuntu-Docker.yml
+  when: ansible_os_family == 'Debian'
